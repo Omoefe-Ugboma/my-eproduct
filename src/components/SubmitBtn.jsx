@@ -1,9 +1,8 @@
- // eslint-disable-next-line no-unused-vars
-import React from 'react'
-
-const SubmitBtn = () => {
+const SubmitBtn = ({text}) => {
   return (
-    <div>SubmitBtn</div>
+    <button type='submit' className='btn btn-primary'>
+      {text}
+    </button>
   )
 }
 
