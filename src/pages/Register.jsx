@@ -1,3 +1,4 @@
+import { FormInput, SubmitBtn} from '../components';
 
 const Register = () => {
   return (
