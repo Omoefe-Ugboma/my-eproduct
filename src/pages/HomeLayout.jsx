@@ -4,9 +4,12 @@ const HomeLayout = () => {
   return (
      <>
        <nav>
-        <span>Flexicon Store</span>
+        <span  className='text-4xl text-primary'>Flexicon Store</span>
        </nav>
+       <section className='mx-auto max-w-6xl px-8 py-20'>
        <Outlet/>
+       </section>
+       
      </>
   )
 }
