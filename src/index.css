@@ -2,8 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @layer components {
+/* @import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities'; */
+
+@layer components {
     .align-element {
         @apply mx-auto max-w-6xl px-8; 
     }
-} */
+}
