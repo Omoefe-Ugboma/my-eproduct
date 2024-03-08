@@ -10,7 +10,7 @@ const HomeLayout = () => {
        <Header/>
        <Navbar/>
        <section className='mx-auto max-w-6xl px-8 py-20'>
-       <Outlet/>
+          <Outlet/>
        </section>
        
      </>
