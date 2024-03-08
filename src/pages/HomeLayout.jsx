@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import { Header } from '../components';
+import { Header, Navbar} from '../components';
 
 const HomeLayout = () => {
   return (
@@ -8,6 +8,7 @@ const HomeLayout = () => {
         <span  className='text-4xl text-primary'>Flexicon Store</span>
        </nav> */}
        <Header/>
+       <Navbar/>
        <section className='mx-auto max-w-6xl px-8 py-20'>
        <Outlet/>
        </section>
