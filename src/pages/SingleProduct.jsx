@@ -12,7 +12,7 @@ const SingleProduct = () => {
   const { image, title, price, description, colors, company} = product.attributes
   return (
     <h1 className="text-3xl font-bold underline">
-    Single Product
+    Single Products 
   </h1>
   )
 }
