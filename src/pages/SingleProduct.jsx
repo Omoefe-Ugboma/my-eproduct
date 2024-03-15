@@ -61,6 +61,28 @@ const SingleProduct = () => {
             })}
           </div>
         </div>
+        {/* AMOUNT */}
+        <div className="form-control w-full max-w-xs">
+          <label className='label'>
+            <h4 className='text-md font-medium tracking-wider capitalize'>
+              amount
+            </h4>
+          </label>
+          <select className='select select-secondary select-bordered select-md'
+          id='amount' value={amount} onChange={handleAmount}>
+            <option value={1}>1</option>
+            <option value={2}>2</option>
+            <option value={3}>3</option>
+          </select>
+        </div>
+        {/* CART BTN */}
+        <div className="mt-10">
+          <button className='btn btn-secondary btn-md'
+          onClick={() => console.log('add to bag')}
+          >
+            add to bag
+          </button>
+        </div>
       </div>
     </div>
   </section>
