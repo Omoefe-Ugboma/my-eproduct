@@ -14,7 +14,9 @@ const SingleProduct = () => {
   const [productColor, setProductColor] = useState(colors[0])
   const [amount, setAmount] = useState(1)
 
-  const handleAm
+  const handleAmount = (e) => {
+    setAmount(parseInt(e.target.value));
+  }
   return <section>
     <div className='text-md breadcrumbs'>
        <ul>
