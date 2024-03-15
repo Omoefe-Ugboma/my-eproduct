@@ -13,6 +13,8 @@ const SingleProduct = () => {
   const dollarsAmount = formatPrice(price);
   const [productColor, setProductColor] = useState(colors[0])
   const [amount, setAmount] = useState(1)
+
+  const handleAm
   return <section>
     <div className='text-md breadcrumbs'>
        <ul>
