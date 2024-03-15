@@ -44,8 +44,14 @@ const SingleProduct = () => {
           </h4>
           <div className="mt-2">
             {colors.map((color)=>{
-              return <button key={color} type='button' className={`badge w-6 h-6 mr-2 ${color === productColor}`}>
-                
+              return <button 
+                       key={color} 
+                       type='button' 
+                       className={`badge w-6 h-6 mr-2 
+                       ${color === productColor && 'border-2 border-secondary'}`}
+                       style={{ backgroundColor: color}}
+                       onClick={() => setProductColor(color)}
+                       >
               </button>
             })}
           </div>
