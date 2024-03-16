@@ -2,7 +2,7 @@
 const Filters = () => {
   return (
     <div>
-      
+      <p>Filters</p>
     </div>
   )
 }
