@@ -35,6 +35,8 @@ const Filters = () => {
       list={['a-z','z-a','high','low']}
       size='select-sm'
       />
+      {/* PRICE */}
+      <FormRange name='price' label='select price' size='range-sm'/>
    {/* BUTTONS */}
    <button type='submit' className='btn btn-primary btn-sm'>
     search
