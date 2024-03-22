@@ -4,7 +4,7 @@ import { useState } from 'react';
 const FormRange = ({label, name, size}) => {
     const step = 1000
     const maxPrice = 100000
-    const [selectedPrice, setSelectedProce] = useState(maxPrice)
+    const [selectedPrice, setSelectedPrice] = useState(maxPrice)
 
     return (
         <div className='form-control'>
@@ -19,6 +19,8 @@ const FormRange = ({label, name, size}) => {
              max={maxPrice}
              value={selectedPrice}
              onChange={(e) => selectedPrice(e.target.value)}
+             className={`range range-primary ${size}`}
+             step={step}
           />
         </div>
     )

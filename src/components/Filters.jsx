@@ -1,6 +1,7 @@
 import { Form, useLoaderData, Link } from 'react-router-dom';
 import FormInput from './FormInput';
 import FormSelect from './FormSelect';
+import FormRange from './FormRange';
 
 const Filters = () => {
   const {meta} = useLoaderData()
