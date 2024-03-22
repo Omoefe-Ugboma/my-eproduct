@@ -11,12 +11,19 @@ const HomeLayout = () => {
        </nav> */}
        <Header/>
        <Navbar/>
-       <section className='mx-auto max-w-6xl px-8 py-20'>
-          <Outlet/>
-       </section>
+       {isPageLoading ? (
+          <Loading/>        
+       ):(
+        <section className='align-element py-20'>
+           <Outlet/>
+        </section>
+       )}
+       {/* <section className='mx-auto max-w-6xl px-8 py-20'>
+          
+       </section> */}
        
      </>
-  )
-}
+  );
+};
 
 export default HomeLayout
