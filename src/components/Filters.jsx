@@ -42,7 +42,7 @@ const Filters = () => {
       defaultValue={order}
       />
       {/* PRICE */}
-      <FormRange name='price' label='select price' size='range-sm'/>
+      <FormRange name='price' label='select price' size='range-sm' price={price}/>
       {/* SHIPPING */}
       <FormCheckbox name='shipping' label='free shipping' size='checkbox-sm'/>
       {/* BUTTONS */}
