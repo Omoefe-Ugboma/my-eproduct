@@ -9,10 +9,19 @@ const PaginationContainer = () => {
     const handlePageChange = (pageNumber) =>{
       console.log(pageNumber);
     }
-    if(pageCount < 2) return null
+    if(pageCount < 2) return null;
     return (
-      <div>
-        <h5>pagination</h5>
+      <div className='mt-16 flex justify-end'>
+        <div className='join'>
+         <button
+          className='btn btn-xs sm:btn-md join-item'
+          onClick={() =>{
+            handlePageChange(1);
+          }}
+         >
+          Prev
+         </button>
+        </div>
       </div>
     )
 }
