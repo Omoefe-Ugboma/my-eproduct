@@ -6,11 +6,14 @@ const PaginationContainer = () => {
     const pages = Array.from({ length: pageCount }, (_,index)=>{
     return index + 1;
     });
-    const {search, pathname}
+    const { search, pathname } = useLocation();
+    const navigate = useNavigate();
     const handlePageChange = (pageNumber) =>{
       console.log(pageNumber);
-    }
+    }; 
+
     if(pageCount < 2) return null;
+    
     return (
       <div className='mt-16 flex justify-end'>
         <div className='join'>
