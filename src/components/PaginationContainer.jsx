@@ -6,6 +6,7 @@ const PaginationContainer = () => {
     const pages = Array.from({ length: pageCount }, (_,index)=>{
     return index + 1;
     });
+    const {search, pathname}
     const handlePageChange = (pageNumber) =>{
       console.log(pageNumber);
     }
