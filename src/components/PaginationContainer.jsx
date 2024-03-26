@@ -9,11 +9,13 @@ const PaginationContainer = () => {
     const { search, pathname } = useLocation();
     const navigate = useNavigate();
     const handlePageChange = (pageNumber) =>{
-      console.log(pageNumber);
+       const searchParams = new URLSearchParams(search);
+       searchParams.set('page',pageNumber);
+       navigate(`${pathname}?${searchParams.toString()}`);
     }; 
 
     if(pageCount < 2) return null;
-    
+
     return (
       <div className='mt-16 flex justify-end'>
         <div className='join'>
