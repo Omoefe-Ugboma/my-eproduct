@@ -9,3 +9,16 @@ const defaultState = {
   tax: 0,
   orderTotal: 0,
 };
+
+const cartSlice = createSlice({
+    name:'cart',
+    initialState:defaultState,
+    reducers:{
+        addItem:(state,action) =>{
+            console.log(action.payload);
+        }
+    }
+})
+
+
+
