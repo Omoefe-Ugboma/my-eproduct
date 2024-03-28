@@ -18,7 +18,13 @@ const SingleProduct = () => {
 
   const handleAmount = (e) => {
     setAmount(parseInt(e.target.value));
+  };
+
+  const cartProduct = {
+    cartID:product.id + productColor,
   }
+
+  const dispatch = useDispatch()
   return <section>
     <div className='text-md breadcrumbs'>
        <ul>
