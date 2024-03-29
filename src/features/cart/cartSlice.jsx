@@ -15,7 +15,16 @@ const cartSlice = createSlice({
     initialState:defaultState,
     reducers:{
         addItem:(state,action) =>{
-            console.log(action.payload);
+          const { product } = action.payload;
+          const item = state.cartItems.find((i) => i.cardID === product.cardID);
+          if(item){
+            item.amount += product.amount;
+          }else{
+            state.cartItems.push(product);
+          }
+          state.numItemsInCart += product.amount
+          state.cartTotal += product.price * product.amount
+          state.tax = 0.1
         },
         clearCart:(state) =>{},
         removeItem:(state,action) =>{},
