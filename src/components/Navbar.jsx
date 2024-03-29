@@ -3,7 +3,7 @@ import { FaBarsStaggered } from 'react-icons/fa6';
 import { NavLink } from 'react-router-dom';
 import NavLinks from './NavLinks';
 import { useEffect, useState } from 'react';
-
+import { useSelector } from 'react-redux';
 const themes = {
    winter: 'winter',
    dracula: 'dracula',
