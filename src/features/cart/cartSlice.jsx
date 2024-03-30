@@ -26,12 +26,12 @@ const cartSlice = createSlice({
           }else{
             state.cartItems.push(product);
           }
+         
           state.numItemsInCart += product.amount;
           state.cartTotal += product.price * product.amount;
-          
           cartSlice.caseReducers.calculateTotals(state)
-          
           toast.success('Item added to cart');
+        
         },
         clearCart:(state) =>{},
         removeItem:(state,action) =>{},
