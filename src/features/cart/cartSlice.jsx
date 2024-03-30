@@ -10,6 +10,8 @@ const defaultState = {
   orderTotal: 0,
 };
 
+const 
+
 const cartSlice = createSlice({
     name:'cart',
     initialState:defaultState,
