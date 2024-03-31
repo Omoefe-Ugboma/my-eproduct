@@ -33,7 +33,9 @@ const cartSlice = createSlice({
           toast.success('Item added to cart');
         
         },
-        clearCart:(state) =>{},
+        clearCart:(state) =>{
+          localStorage
+        },
         removeItem:(state,action) =>{},
         editItem:(state,action) =>{},
         calculateTotals :(state) =>{
