@@ -40,7 +40,7 @@ const cartSlice = createSlice({
         removeItem:(state,action) =>{
           const {cardID} = action.payload
           const product = state.cartItems.find((i) => i.cardID === cardID);
-          
+          state.cartItems = state.cartItems.filter((i)=> i.cardID !== cardID)
         },
         editItem:(state,action) =>{},
         calculateTotals :(state) =>{
