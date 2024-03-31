@@ -38,6 +38,8 @@ const cartSlice = createSlice({
           return defaultState;
         },
         removeItem:(state,action) =>{
+          const {cardID} = action.payload
+          const product = state.cartItems.find((i) => i.cardID === cardID);
           
         },
         editItem:(state,action) =>{},
