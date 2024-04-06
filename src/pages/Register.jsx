@@ -1,8 +1,22 @@
 import { FormInput, SubmitBtn} from '../components';
-import { Form, Link } from 'react-router-dom';
+import { Form, Link, redirect } from 'react-router-dom';
+import { customFetch } from '../utils';
+import { toast } from 'react-toastify';
 
 export const action = async ({ request }) =>{
-  return null;
+  const formData = await request.formData()
+  const data = Object.fromEntries(formData)
+
+  try{
+   const response = await customFetch.post('/auth/local/register',data)
+   toast.success('account created successfully')
+   return redirect('/login')
+  } catch (error){
+    const errorMessage = error?.response?.data?.message || 'please double your credentials'
+    toast.error(errorMessage)
+    return null;
+  }
+  
 };
 
 const Register = () => {
@@ -15,19 +29,19 @@ const Register = () => {
              type='text' 
              label='username' 
              name='username'
-             defaultValue='james2 smith'
+            
              />
           <FormInput 
              type='email' 
              label='email' 
              name='email'
-             defaultValue='james2@gmail.com'
+             
              />
           <FormInput 
              type='password' 
              label='password' 
              name='password'
-             defaultValue='secret' 
+            
              />
           <div className='mt-4'>
              <SubmitBtn text='register'/>
