@@ -1,7 +1,7 @@
 import { FormInput, SubmitBtn} from '../components';
 import { Form, Link } from 'react-router-dom';
 
-export const action = async () =>{
+export const action = async ({ request }) =>{
   return null;
 };
 
@@ -11,9 +11,24 @@ const Register = () => {
           <h4 className='text-center text-3xl font-bold'>
             Register
           </h4>
-          <FormInput type='text' label='username' name='username'/>
-          <FormInput type='email' label='email' name='email'/>
-          <FormInput type='password' label='password' name='password'/>
+          <FormInput 
+             type='text' 
+             label='username' 
+             name='username'
+             defaultValue='james2 smith'
+             />
+          <FormInput 
+             type='email' 
+             label='email' 
+             name='email'
+             defaultValue='james2@gmail.com'
+             />
+          <FormInput 
+             type='password' 
+             label='password' 
+             name='password'
+             defaultValue='secret' 
+             />
           <div className='mt-4'>
              <SubmitBtn text='register'/>
           </div>
