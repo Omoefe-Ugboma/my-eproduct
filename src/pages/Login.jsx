@@ -2,7 +2,7 @@ import { FormInput, SubmitBtn } from "../components";
 import { Form, Link } from 'react-router-dom';
 
 export const action = async () =>{
-  
+  return null;
 } 
 
 const Login = () => {
