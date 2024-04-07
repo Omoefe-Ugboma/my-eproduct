@@ -1,7 +1,9 @@
+// import { useDispatch } from 'react-redux';
 import { FormInput, SubmitBtn } from "../components";
 import { Form, Link } from 'react-router-dom';
 
-export const action = async () =>{
+export const action = (store) => async () =>{
+  console.log(store);
   return null;
 } 
 
