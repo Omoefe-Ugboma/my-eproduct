@@ -39,7 +39,8 @@ const Login = () => {
       toast.success('welcome guest user')
       navigate('/')
     }catch(error){
-
+     console.log(error);
+     toast.error('guest user login error. please try again')
     }
   }
 
@@ -53,13 +54,13 @@ const Login = () => {
                type='email'
                label='email'
                name='identifier'
-               defaultValue='test@test.com'
+                
              />
              <FormInput
                type='password'
                label='password'
                name='password'
-               defaultValue='secret'
+              
              />
              <div className="mt-4">
                 <SubmitBtn text='Login'/>
