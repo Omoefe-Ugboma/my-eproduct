@@ -31,7 +31,10 @@ const Login = () => {
 
   const loginAsGuestUser = async () =>{
     try{
-
+      const response = await customFetch.post('/auth/local',{
+        identifier:'test@test.com',
+        password:'secret'
+      })
     }catch(error){
 
     }
