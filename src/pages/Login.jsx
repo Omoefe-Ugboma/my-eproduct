@@ -11,10 +11,9 @@ export const action = (store) => async ({request}) =>{
   const data = Object.fromEntries(formData);
   try {
     const response = await customFetch.post('/auth/local', data);
-    console.log(response);
+    store.dispatch(loginUser(response.data));
     toast.success('logged in successfully');
-    // return redirect('/');
-    return null;
+    return redirect('/');
   } catch (error) {
     const errorMessage =
       error?.response?.data?.error?.message ||
@@ -27,7 +26,9 @@ export const action = (store) => async ({request}) =>{
 
 const Login = () => {
   return <section className="h-screen grid place-items-center">
-       <Form method="post" className="card w-96 p-8 bg-base-100 shadow-lg flex 
+       <Form 
+          method="post" 
+          className="card w-96 p-8 bg-base-100 shadow-lg flex 
        flex-col gap-y-4">
              <h4 className="text-center text-3xl font-bold">Login</h4>
              <FormInput
