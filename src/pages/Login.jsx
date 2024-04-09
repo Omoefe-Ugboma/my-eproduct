@@ -35,6 +35,9 @@ const Login = () => {
         identifier:'test@test.com',
         password:'secret'
       })
+      dispatch(loginUser(response.data))
+      toast.success('welcome guest user')
+      navigate('/')
     }catch(error){
 
     }
