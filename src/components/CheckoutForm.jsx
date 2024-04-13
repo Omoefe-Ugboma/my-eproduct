@@ -23,13 +23,23 @@ export const action =
   }
   
   try{
-   const response = await
+   const response = await customFetch.post(
+    '/orders',
+    {data:info},
+    {
+    headers:{
+      Authorization: `Bearer ${user.token}` 
+    }
+   })
+  store.dispatch(clearCart());
+  toast.success('order placed successfully')
+   return redirect('/orders');
   }catch(error){
-
+   console.log(error);
+   return null;
   }
-
-  return null;
-}
+  
+};
 
 const CheckoutForm = () => {
   return <Form method='POST' className='flex flex-col gap-y-4'>
