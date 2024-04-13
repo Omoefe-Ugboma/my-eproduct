@@ -5,8 +5,8 @@ import { customFetch, formatPrice } from '../utils';
 import { toast } from 'react-toastify';
 import { clearCart } from '../features/cart/cartSlice';
 
-export const action = (store) => async () =>{
-  console.log(store);
+export const action = (store) => async ({request}) =>{
+  const formData = await request
   return null;
 }
 
