@@ -5,8 +5,14 @@ import { customFetch, formatPrice } from '../utils';
 import { toast } from 'react-toastify';
 import { clearCart } from '../features/cart/cartSlice';
 
-export const action = (store) => async ({request}) =>{
-  const formData = await request
+export const action = 
+   (store) => 
+   async ({request}) =>{
+  const formData = await request.formData();
+  const { name, address } = Object.fromEntries(formData);
+  const user = store.getState().userState.user;
+  const {cartItems, orderTotal, numItemsInCart} = store.getState().cartState
+  
   return null;
 }
 
