@@ -13,6 +13,21 @@ export const action =
   const user = store.getState().userState.user;
   const {cartItems, orderTotal, numItemsInCart} = store.getState().cartState
   
+  const info = {
+    name,
+    address,
+    chargeTotal:orderTotal,
+    orderTotal: formatPrice(orderTotal),
+    cartItems,
+    numItemsInCart,
+  }
+  
+  try{
+   const response = await
+  }catch(error){
+
+  }
+
   return null;
 }
 
