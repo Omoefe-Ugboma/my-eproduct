@@ -36,6 +36,10 @@ export const action =
    return redirect('/orders');
   }catch(error){
    console.log(error);
+   const errorMessage = 
+     error?.response?.data?.message ||
+     'there was an error placing your order';
+     toast.error(errorMessage);
    return null;
   }
   
