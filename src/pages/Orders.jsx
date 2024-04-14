@@ -15,7 +15,23 @@ export const loader =
     const params = Object.fromEntries([
       ...new URL(request.url).searchParams.entries(),
     ]);
-    return null;
+    try {
+      const response = await customFetch.get('/orders',{
+        params, headers:{
+          Authorization: `Bearer ${user.token}`
+        }
+      })
+      console.log(response);
+      return {orders:response.data.data,meta:response.data.meta}
+    } catch (error) {
+      console.log(error);
+    const errorMessage = 
+      error?.response?.data?.message ||
+      'there was an error placing your order';
+      toast.error(errorMessage);
+      if(error.response.status === 401 || 403) return redirect('/login');
+    } 
+     
   }
 
 const Orders = () => {
