@@ -6,6 +6,15 @@ import { OrdersList, PaginationContainer, SectionTitle } from '../components';
 export const loader = 
   (store) =>
   async ({ request }) =>{
+    const user = store.getState().userState.user;
+
+    if(!user){
+      toast.warn('You must logged in to view orders');
+      return redirect('/login');
+    }
+    const params = Object.fromEntries([
+      ...new URL(request.url).searchParams.entries(),
+    ]);
     return null;
   }
 
