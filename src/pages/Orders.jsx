@@ -35,6 +35,7 @@ export const loader =
   }
 
 const Orders = () => {
+  const {meta} = useLoaderData()
   return (
     <h1 className="text-3xl font-bold underline">
     Orders
