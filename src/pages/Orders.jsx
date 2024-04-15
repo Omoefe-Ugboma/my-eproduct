@@ -35,7 +35,10 @@ export const loader =
   }
 
 const Orders = () => {
-  const {meta} = useLoaderData()
+  const {meta} = useLoaderData();
+  if(meta.pagaination.total < 1){
+    return <SectionTitle text='please make an order'/>;
+  }
   return (
     <h1 className="text-3xl font-bold underline">
     Orders
