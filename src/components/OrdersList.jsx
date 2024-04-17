@@ -13,7 +13,10 @@ const OrdersList = () => {
          <thead>
           <tr>
             <th>Name</th>
-            <th></th>
+            <th>Address</th>
+            <th>Products</th>
+            <th>Cost</th>
+            <th className='hidden sm:block'>Date</th>
           </tr>
          </thead>
        </table>
