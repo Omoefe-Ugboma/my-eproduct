@@ -19,6 +19,11 @@ const OrdersList = () => {
             <th className='hidden sm:block'>Date</th>
           </tr>
          </thead>
+         <tbody>
+          {orders.map((order)=>{
+            const 
+          })}
+         </tbody>
        </table>
     </div>
   </div>
