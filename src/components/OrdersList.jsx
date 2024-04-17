@@ -24,10 +24,14 @@ const OrdersList = () => {
             const id = order.id;
             const { name, address, numItemsInCart, orderTotal, createdAt} =
             order.attributes;
-            const data = day(createdAt).format('hh:mm a - MM Do, YYYY');
+            const date = day(createdAt).format('hh:mm a - MM Do, YYYY');
             return (
               <tr key={id}>
-                <td></td>
+                <td>{name}</td>
+                <td>{address}</td>
+                <td>{numItemsInCart}</td>
+                <td>{orderTotal}</td>
+                <td className='hidden sm:block'>{date}</td>
               </tr>
             );
           })}
