@@ -21,7 +21,15 @@ const OrdersList = () => {
          </thead>
          <tbody>
           {orders.map((order)=>{
-            const 
+            const id = order.id;
+            const { name, address, numItemsInCart, orderTotal, createdAt} =
+            order.attributes;
+            const data = day(createdAt).format('hh:mm a - MM Do, YYYY');
+            return (
+              <tr key={id}>
+                <td></td>
+              </tr>
+            );
           })}
          </tbody>
        </table>
