@@ -1,5 +1,5 @@
 import { useLoaderData, useLocation, useNavigate } from 'react-router-dom';
-const PaginationContainer = () => {
+const ComplexPaginationContainer = () => {
   const {meta} = useLoaderData();
   const {pageCount, page} = meta.pagination;
 
@@ -57,4 +57,4 @@ const PaginationContainer = () => {
     )
 }
 
-export default PaginationContainer;
+export default ComplexPaginationContainer;
