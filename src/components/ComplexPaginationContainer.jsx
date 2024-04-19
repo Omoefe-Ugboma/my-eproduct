@@ -26,6 +26,11 @@ const ComplexPaginationContainer = () => {
      </button>
     }
 
+    const renderPageButtons = () =>{
+      const pageButtons = []
+      return pageButtons
+    }
+
     if(pageCount < 2) return null;
 
     return (
@@ -43,7 +48,7 @@ const ComplexPaginationContainer = () => {
          </button>
          {pages.map((pageNumber) =>{
           return (
-            
+             
           );
          })}
          <button
