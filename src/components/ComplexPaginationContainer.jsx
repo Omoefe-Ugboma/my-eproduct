@@ -27,8 +27,14 @@ const ComplexPaginationContainer = () => {
     }
 
     const renderPageButtons = () =>{
-      const pageButtons = []
-      return pageButtons
+      const pageButtons = [];
+      // first button
+      pageButtons.push(addPageButton({pageNumber:1,activeClass: page === 1}));
+      // last button
+      pageButtons.push(
+        addPageButton({pageNumber:pageCount,activeClass: page === pageCount})
+      );
+      return pageButtons;
     }
 
     if(pageCount < 2) return null;
@@ -46,11 +52,7 @@ const ComplexPaginationContainer = () => {
          >
           Prev
          </button>
-         {pages.map((pageNumber) =>{
-          return (
-             
-          );
-         })}
+         {renderPageButtons()}
          <button
           className='btn btn-xs sm:btn-md join-item'
           onClick={() =>{
