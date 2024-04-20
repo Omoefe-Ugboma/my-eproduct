@@ -3,11 +3,13 @@ import { customFetch } from "../utils";
 
 const url = '/products';
 
-export const loader = async ({ request }) =>{
+export const loader = 
+(queryClient) => 
+  async ({ request }) =>{
   const params = Object.fromEntries([
       ...new URL(request.url).searchParams.entries(),
   ]);
- console.log(params);
+//  console.log(params);
  const response = await customFetch(url,{
   params
  });
