@@ -5,8 +5,10 @@ import { customFetch } from "../utils";
 const url = '/products?featured=true';
 
 const featuredProductsQuery = {
-  
+  queryKey:['featuredProducts'],
+  queryFn:() => 
 }
+
 
 export const loader = (queryClient) => async () =>{
    const response = await customFetch(url);
