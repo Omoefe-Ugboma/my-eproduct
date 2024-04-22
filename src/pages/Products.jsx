@@ -3,7 +3,7 @@ import { customFetch } from "../utils";
 const url = '/products';
 
 const allProductsQuery = {queryParams} =>{
-  const {}
+  const {search, category, company, sort, price, shipping, page} = queryParams
 }
 
 export const loader = 
