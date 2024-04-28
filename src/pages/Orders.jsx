@@ -3,6 +3,8 @@ import { toast } from 'react-toastify';
 import { customFetch } from '../utils';
 import { OrdersList, ComplexPaginationContainer, SectionTitle } from '../components';
 
+const ordersQuery = (params) =>
+
 export const loader = 
   (store) =>
   async ({ request }) =>{
