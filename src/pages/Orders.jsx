@@ -3,7 +3,15 @@ import { toast } from 'react-toastify';
 import { customFetch } from '../utils';
 import { OrdersList, ComplexPaginationContainer, SectionTitle } from '../components';
 
-const ordersQuery = (params) =>
+const ordersQuery = (params, user) =>{
+  return {
+    queryKey:[
+      'orders',
+      user.username,
+      params.page ? parseInt(params.page) : 1,
+    ]
+  }
+}
 
 export const loader = 
   (store) =>
